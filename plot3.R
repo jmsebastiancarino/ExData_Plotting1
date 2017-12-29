@@ -19,7 +19,7 @@ data3$Sub_metering_1 <- as.numeric(data3$Sub_metering_1)
 data3$Sub_metering_2 <- as.numeric(data3$Sub_metering_2)
 data3$Sub_metering_3 <- as.numeric(data3$Sub_metering_3)
 
-##To create xyplot of Energy Submetering
+##To create a plot of Energy Submetering
 dev.cur()
 png(file="plot3.png", height=480, width=480)
 plot(Sub_metering_1 ~ datetime,data=data3, type="S", col="black", ylab="Energy sub metering")
