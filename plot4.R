@@ -19,7 +19,7 @@ data3$Global_active_power <- as.numeric(data3$Global_active_power)
 data3$Global_reactive_power <- as.numeric(data3$Global_reactive_power)
 data3$Voltage <- as.numeric(data3$Voltage)
 
-##To create xyplot of Global Active Power, Voltage, Global Reactive Power, and Energy Sub Metering
+##To create plots of Global Active Power, Voltage, Global Reactive Power, and Energy Sub Metering
 dev.cur()
 png(file="plot4.png", height=480, width=480)
 par(mfcol=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
