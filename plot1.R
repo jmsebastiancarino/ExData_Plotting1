@@ -2,11 +2,11 @@
 md <- read.table("household_power_consumption.txt", header=TRUE, sep=";")
 
 ##To convert the Date and Time variables to Date/Time classes
+##To add another column, datetime
 library(lubridate)
 md$Date <- dmy(md$Date)
-md$Date <- ymd(md$Date)
-md$Time <- strptime(md$Time, format="%H:%M:%S")
-
+md$datetime <- paste(md$Date, md$Time)
+md$datetime <- as.POSIXct(strptime(md$datetime, "%Y-%m-%d %H:%M:%S"))
 
 ##To extract only data from dates 2007-02-01 and 2007-02-02
 data1 <- md[ which(md$Date == "2007-02-01"), ]
