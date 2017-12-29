@@ -13,7 +13,7 @@ data1 <- md[ which(md$Date == "2007-02-01"), ]
 data2 <- md[ which(md$Date == "2007-02-02"), ]
 data3 <- rbind(data1, data2)
 
-##To create xyplot of Global Active Power according to day
+##To create a plot of Global Active Power according to day
 data3$Global_active_power <- as.numeric(data3$Global_active_power)
 dev.cur()
 png(file="plot2.png", height=480, width=480)
